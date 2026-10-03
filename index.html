@@ -9,7 +9,7 @@
       content="Gradnja d.o.o. Mostar. Građevinski i zanatski radovi u visokogradnji od 1994. Maršala Tita 294. 061 209 379."
     />
     <meta name="theme-color" content="#147a3a" />
-    <link rel="icon" href="images/logo.jpg" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,14 +40,10 @@
     </script>
   </head>
   <body>
-    <div class="page-bg" aria-hidden="true">
-      <span class="grid"></span>
-      <span class="wash"></span>
-    </div>
     <a class="skip" href="#sadrzaj" data-i18n="skip">Preskoči na sadržaj</a>
     <header class="site-header">
       <a class="logo" href="#vrh">
-        <img src="images/logo.jpg" alt="Gradnja d.o.o. Mostar" width="210" height="70" />
+        <img src="images/logo.svg" alt="Gradnja d.o.o. Mostar" width="220" height="62" />
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n-aria="nav.menu" aria-label="Meni">
         <span></span><span></span>
@@ -70,7 +66,24 @@
 
     <main id="sadrzaj">
       <section class="hero" id="vrh">
-        <img src="images/zinkteknik.png" alt="Proizvodna hala i upravna zgrada, radovi Gradnje Mostar" />
+        <div class="hero-slides">
+          <figure class="is-active">
+            <img src="images/site.jpg" alt="Stambeni objekat, Gradnja Mostar" />
+            <figcaption data-i18n="p.house">Stambeni objekat</figcaption>
+          </figure>
+          <figure>
+            <img src="images/kapetanovina.jpg" alt="Stambeno-poslovni kompleks Kapetanovina" />
+            <figcaption>Kapetanovina</figcaption>
+          </figure>
+          <figure>
+            <img src="images/opine.jpg" alt="Džamija u Opinama" />
+            <figcaption data-i18n="p.opine">Džamija u Opinama</figcaption>
+          </figure>
+          <figure>
+            <img src="images/pocitelj.jpg" alt="Obnova kamene kuće u Počitelju" />
+            <figcaption data-i18n="p.pocitelj">Obnova Počitelja</figcaption>
+          </figure>
+        </div>
         <div class="hero-shade"></div>
         <div class="hero-copy">
           <p class="quote">Shaping the Future</p>
@@ -83,6 +96,9 @@
             <a class="btn btn-line" href="#projekti" data-i18n="hero.secondary">Pogledaj projekte</a>
           </div>
         </div>
+        <button class="hero-nav prev" type="button" aria-label="Prethodna slika">‹</button>
+        <button class="hero-nav next" type="button" aria-label="Sljedeća slika">›</button>
+        <div class="hero-dots" role="tablist"></div>
       </section>
 
       <section class="stats">
@@ -107,7 +123,7 @@
       <section class="about" id="o-nama">
         <div>
           <p class="eyebrow" data-i18n="about.kicker">O nama</p>
-          <h2 data-i18n="about.title">Visokogradnja, zanat i odgovornost.</h2>
+          <h2 data-i18n="about.title">Zanat bez kompromisa.</h2>
           <p data-i18n="about.text">
             Na domaćem tržištu smo od 1994. Radimo građevinske i građevinsko-zanatske poslove, prvenstveno u visokogradnji: AB radove, zidanje, fasadu, limariju, krov, elektro i vodoinstalacije. Od 2016. radimo i projektovanje i nadzor.
           </p>
@@ -167,13 +183,6 @@
         </div>
         <div class="project-grid">
           <article class="wide">
-            <img src="images/zinkteknik.png" alt="Upravna zgrada i proizvodna hala Zinkteknik Bosnia" />
-            <div>
-              <h3>Zinkteknik Bosnia</h3>
-              <p data-i18n="p.zink">Upravna zgrada i proizvodna hala.</p>
-            </div>
-          </article>
-          <article>
             <img src="images/site.jpg" alt="Stambeni objekat Gradnja Mostar" />
             <div>
               <h3 data-i18n="p.house">Stambeni objekat</h3>
@@ -181,10 +190,10 @@
             </div>
           </article>
           <article>
-            <img src="images/tepa.jpg" alt="Rekonstrukcija tržnice Tepa u Mostaru" />
+            <img src="images/kapetanovina.jpg" alt="Stambeno-poslovni kompleks Kapetanovina" />
             <div>
-              <h3>Tepa Mostar</h3>
-              <p data-i18n="p.tepa">Rekonstrukcija mostarske tržnice.</p>
+              <h3>Kapetanovina</h3>
+              <p data-i18n="p.kap">Stambeno-poslovni kompleks u Starom gradu.</p>
             </div>
           </article>
           <article>
@@ -202,10 +211,10 @@
             </div>
           </article>
           <article>
-            <img src="images/kapetanovina.jpg" alt="Stambeno-poslovni kompleks Kapetanovina" />
+            <img src="images/tepa.jpg" alt="Rekonstrukcija tržnice Tepa u Mostaru" />
             <div>
-              <h3>Kapetanovina</h3>
-              <p data-i18n="p.kap">Stambeno-poslovni kompleks u Starom gradu.</p>
+              <h3>Tepa Mostar</h3>
+              <p data-i18n="p.tepa">Rekonstrukcija mostarske tržnice.</p>
             </div>
           </article>
           <article>
@@ -213,13 +222,6 @@
             <div>
               <h3>SPO River</h3>
               <p data-i18n="p.river">Stambeno-poslovni objekat u Mostaru.</p>
-            </div>
-          </article>
-          <article>
-            <img src="images/podhum.jpg" alt="Stambeno-poslovni objekat u Podhumu" />
-            <div>
-              <h3>Podhum</h3>
-              <p data-i18n="p.podhum">Konstruktivni i zanatski radovi, Villa Floris.</p>
             </div>
           </article>
         </div>
@@ -328,7 +330,7 @@
     </main>
 
     <footer>
-      <img src="images/logo.jpg" alt="" width="160" height="54" />
+      <img src="images/logo.svg" alt="Gradnja d.o.o. Mostar" width="220" height="62" />
       <div>
         <strong>Gradnja d.o.o. Mostar</strong>
         <p>Maršala Tita 294 · ID 4227100870001 · PDV 227100870001</p>

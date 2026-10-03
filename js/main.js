@@ -17,7 +17,7 @@ const translations = {
     "stats.3": "Odrađenih projekata",
     "stats.4": "Sjedište i gradilišta",
     "about.kicker": "O nama",
-    "about.title": "Visokogradnja, zanat i odgovornost.",
+    "about.title": "Zanat bez kompromisa.",
     "about.text":
       "Na domaćem tržištu smo od 1994. Radimo građevinske i građevinsko-zanatske poslove, prvenstveno u visokogradnji: AB radove, zidanje, fasadu, limariju, krov, elektro i vodoinstalacije. Od 2016. radimo i projektovanje i nadzor.",
     "about.text2":
@@ -94,7 +94,7 @@ const translations = {
     "stats.3": "Completed projects",
     "stats.4": "Home and sites",
     "about.kicker": "About",
-    "about.title": "High-rise work, craft, and responsibility.",
+    "about.title": "Craft without compromise.",
     "about.text":
       "We have been on the domestic market since 1994. We do construction and finishing work, mainly high-rise: concrete, masonry, facades, sheet metal, roofs, electrical and plumbing. Since 2016 we also design and supervise.",
     "about.text2":
@@ -212,6 +212,48 @@ document.querySelectorAll("#nav a").forEach((link) => {
     toggle?.setAttribute("aria-expanded", "false");
   });
 });
+
+const slides = [...document.querySelectorAll(".hero-slides figure")];
+const dotsWrap = document.querySelector(".hero-dots");
+let slideIndex = 0;
+let slideTimer;
+
+function showSlide(index) {
+  if (!slides.length) return;
+  slideIndex = (index + slides.length) % slides.length;
+  slides.forEach((slide, i) => slide.classList.toggle("is-active", i === slideIndex));
+  dotsWrap?.querySelectorAll("button").forEach((dot, i) => {
+    dot.setAttribute("aria-selected", String(i === slideIndex));
+  });
+}
+
+function startSlides() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(() => showSlide(slideIndex + 1), 6500);
+}
+
+if (slides.length && dotsWrap) {
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Slika ${i + 1}`);
+    dot.addEventListener("click", () => {
+      showSlide(i);
+      startSlides();
+    });
+    dotsWrap.append(dot);
+  });
+  document.querySelector(".hero-nav.prev")?.addEventListener("click", () => {
+    showSlide(slideIndex - 1);
+    startSlides();
+  });
+  document.querySelector(".hero-nav.next")?.addEventListener("click", () => {
+    showSlide(slideIndex + 1);
+    startSlides();
+  });
+  showSlide(0);
+  startSlides();
+}
 
 document.getElementById("order-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
