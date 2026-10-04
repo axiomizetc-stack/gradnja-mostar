@@ -81,6 +81,7 @@ const translations = {
     "form.messagePh": "Lokacija, rok, kratak opis",
     "form.submit": "Pošalji na WhatsApp",
     "form.error": "Unesite ime i telefon.",
+    "built.by": "Napravio Alpha IT Solutions",
   },
   en: {
     skip: "Skip to content",
@@ -164,6 +165,7 @@ const translations = {
     "form.messagePh": "Location, deadline, short description",
     "form.submit": "Send on WhatsApp",
     "form.error": "Enter a name and phone number.",
+    "built.by": "Built by Alpha IT Solutions",
   },
 };
 

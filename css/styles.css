@@ -456,6 +456,7 @@ input:focus, select:focus, textarea:focus {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 22px;
   margin-top: 80px;
@@ -463,6 +464,16 @@ footer {
   background: #111318;
   color: #fff;
 }
+.built-by {
+  width: 100%;
+  margin: 0;
+  font-size: 0.82rem;
+}
+.built-by a {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+}
+.built-by a:hover { color: #fff; text-decoration: underline; }
 
 footer img {
   height: 72px;
